@@ -1,0 +1,16 @@
+{
+    "name": "shahzadthathal/skipcash",
+    "description": "Skipcash payment gateway integration.",
+    "autoload": {
+        "psr-4": {
+            "Shahzadthathal\\Skipcash\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shahzad",
+            "email": "shahzadthathal@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
