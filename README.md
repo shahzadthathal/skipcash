@@ -4,14 +4,15 @@
 
 `composer require shahzadthathal/skipcash`
 
-`php artisan vendor:publish --tag=config`
-
 Add Skipcash Provider to config/app.php `providers` array.
 
 `Shahzadthathal\Skipcash\Providers\SkipcashProvider::class`
 
+Create config file.
 
-SkipcashProvider
+`php artisan vendor:publish --tag=config`
+
+Update .env file
 
 ```
 SKIPCASH_CLIENT_ID=''
@@ -21,6 +22,11 @@ SKIPCASH_WEBHOOK_KEY=''
 SKIPCASH_URL='https://skipcashtest.azurewebsites.net'
 #SKIPCASH_URL='https://api.skipcash.app'
 ```
+
+Run migration
+
+`php artisan migrate`
+
 
 There are two methods to use this package.
 
