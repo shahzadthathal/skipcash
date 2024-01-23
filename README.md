@@ -6,7 +6,7 @@
 
 `php artisan vendor:publish --tag=config`
 
-Add Skipcash Provider to config/app.cphp `providers` array.
+Add Skipcash Provider to config/app.php `providers` array.
 
 `Shahzadthathal\Skipcash\Providers\SkipcashProvider::class`
 
@@ -54,7 +54,9 @@ Copy the content of `Shahzadthathal\Skipcash\Http\Controllers\SkipCashController
 
 Now you can access these routes to generate and verify payments.
 
-`http://127.0.0.1:8000/payment/generate-payment-link`
-`http://127.0.0.1:8000/payment/gateway/response/skipcash`
-`http://127.0.0.1:8000/payment/gateway/response/skipcash/webhook`
+```
+http://127.0.0.1:8000/payment/generate-payment-link
+http://127.0.0.1:8000/payment/gateway/response/skipcash
+http://127.0.0.1:8000/payment/gateway/response/skipcash/webhook
+```
 
