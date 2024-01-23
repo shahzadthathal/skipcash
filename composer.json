@@ -1,6 +1,7 @@
 {
     "name": "shahzadthathal/skipcash",
     "description": "Skipcash payment gateway integration.",
+     "license": "MIT",
     "autoload": {
         "psr-4": {
             "Shahzadthathal\\Skipcash\\": "src/"
