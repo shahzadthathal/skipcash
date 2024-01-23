@@ -24,7 +24,7 @@ SKIPCASH_URL='https://skipcashtest.azurewebsites.net'
 
 There are two methods to use this package.
 
-1. First method
+### 1. First method
 
 You can use built in Trait in your controller:
 
@@ -41,7 +41,7 @@ class YourPaymentController extends Controller{
 ```
 Please see `Shahzadthathal\Skipcash\Http\Controllers\SkipCashController.php` for more methods.
 
-2. Second method
+### 2. Second method
 
 `php artisan vendor:publish --tag=routes`
 
