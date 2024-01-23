@@ -22,6 +22,8 @@ SKIPCASH_URL='https://skipcashtest.azurewebsites.net'
 #SKIPCASH_URL='https://api.skipcash.app'
 ```
 
+There are two methods to use this package.
+
 1. First method
 
 You can use built in Trait in your controller:
@@ -37,7 +39,7 @@ class YourPaymentController extends Controller{
 
 }
 ```
-Please see `Shahzadthathal\Skipcash\Http\Controllers\SkipCashController.php` for more methods
+Please see `Shahzadthathal\Skipcash\Http\Controllers\SkipCashController.php` for more methods.
 
 2. Second method
 
@@ -49,8 +51,7 @@ Please include skipcash.php in the end of the web.php file.
 `require __DIR__.'/skipcash.php';`
 
 
-Create a new controller in i.e. SkipCashController.php and update it in skipcash.php,
-Copy the content of `Shahzadthathal\Skipcash\Http\Controllers\SkipCashController` and paste into your controller.
+Create a new controller i.e. YourSkipCashController.php and update it in skipcash.php route file. Copy the content of `Shahzadthathal\Skipcash\Http\Controllers\SkipCashController` and paste into your controller.
 
 Now you can access these routes to generate and verify payments.
 
