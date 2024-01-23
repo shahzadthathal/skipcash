@@ -39,13 +39,15 @@ use Shahzadthathal\Skipcash\Traits\SkipCashPaymentGatewayTrait;
 
 class YourPaymentController extends Controller{
 
+    use SkipCashPaymentGatewayTrait;
+
     $this->generatePaymentLinkSkipcash(...)
 
     $this->validatePaymentSkipcash(...)
 
 }
 ```
-Please see `Shahzadthathal\Skipcash\Http\Controllers\SkipCashController.php` for more methods.
+Please see `\vendor\shahzadthathal\skipcash\src\Http\Controllers\SkipCashController.php` for more methods.
 
 ### 2. Second method
 
@@ -57,9 +59,9 @@ Please include skipcash.php in the end of the web.php file.
 `require __DIR__.'/skipcash.php';`
 
 
-Create a new controller i.e. YourSkipCashController.php and update it in skipcash.php route file. Copy the content of `Shahzadthathal\Skipcash\Http\Controllers\SkipCashController` and paste into your controller.
+Create a new controller i.e. YourSkipCashController.php and update it in skipcash.php route file. Copy the content of `\vendor\shahzadthathal\skipcash\src\Http\Controllers\SkipCashController.php` and paste into your controller.
 
-Now you can access these routes to generate and verify payments.
+Now you can access these routes to generate pay link and verify payments.
 
 ```
 http://127.0.0.1:8000/payment/generate-payment-link
