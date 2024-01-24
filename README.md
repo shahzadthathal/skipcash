@@ -19,13 +19,14 @@ SKIPCASH_URL='https://skipcashtest.azurewebsites.net'
 #SKIPCASH_URL='https://api.skipcash.app'
 ```
 
-Publish config skipcash helper if you want otherwise leave this command.
+Publish config skipcash helper if you want otherwise leave this command. It will create skipcash.php helper under config dir.
 
 `php artisan vendor:publish --tag=config`
 
 
-Run migration
-This will create skipcash_logs table where we will save logs from payment gateway.
+Run migration.
+
+This will create `skipcash_logs` table where we will save logs from payment gateway.
 
 `php artisan migrate`
 
@@ -124,18 +125,21 @@ Please see `\vendor\shahzadthathal\skipcash\src\Http\Controllers\SkipCashControl
 `php artisan vendor:publish --tag=routes`
 
 Above command will create a skipcash.php route file.
-Please include skipcash.php in the end of the web.php file.
+Please include skipcash.php in the end of the `web.php` route file.
 
 `require __DIR__.'/skipcash.php';`
 
 
-Create a new controller i.e. YourSkipCashController.php and update it in skipcash.php route file. Copy the content of `\vendor\shahzadthathal\skipcash\src\Http\Controllers\SkipCashController.php` and paste into your controller.
+Create a new controller i.e. `YourSkipCashController.php` and update it in `skipcash.php` route file. Copy the content of `\vendor\shahzadthathal\skipcash\src\Http\Controllers\SkipCashController.php` and paste into your controller.
 
 Now you can access these routes to generate pay link and verify payments.
 
 ```
 http://127.0.0.1:8000/payment/generate-payment-link
+
 http://127.0.0.1:8000/payment/gateway/response/skipcash
+
 http://127.0.0.1:8000/payment/gateway/response/skipcash/webhook
+
 ```
 
